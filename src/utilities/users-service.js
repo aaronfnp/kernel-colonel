@@ -1,4 +1,4 @@
-// Serice modules hold the code that implements
+// Service modules hold the code that implements
 // "business"/application logic
 // Service methods often depend upon or use
 // methods in the API modules
