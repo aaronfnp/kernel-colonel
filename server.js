@@ -1,6 +1,3 @@
-require('dotenv').config();
-require('./config/database');
-
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
@@ -9,6 +6,9 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const PORT = process.env.PORT || 3001; 
 const mongoURI = process.env.MONGODB_URI;
+
+require('dotenv').config();
+require('./config/database');
 
 // Connect to MongoDB
 mongoose.connect(mongoURI, {
