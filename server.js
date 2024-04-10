@@ -10,16 +10,6 @@ const mongoURI = process.env.MONGODB_URI;
 require('dotenv').config();
 require('./config/database');
 
-// Connect to MongoDB
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => {
-  console.log('MongoDB connected');
-})
-.catch(err => console.error(err));
-
 // Middleware
 app.use(express.json()); 
 app.use(logger('dev'));
